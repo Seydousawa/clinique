@@ -1,0 +1,31 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f3f4f6;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.open {
+  margin-left: 16rem; /* w-64 */
+}
+
+.main-content.closed {
+  margin-left: 5rem; /* w-20 */
+}
+
+@media (max-width: 768px) {
+  .main-content.open {
+    margin-left: 0;
+  }
+
+  .main-content.closed {
+    margin-left: 0;
+  }
+}

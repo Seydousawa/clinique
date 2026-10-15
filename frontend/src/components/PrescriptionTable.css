@@ -1,0 +1,179 @@
+.table-container {
+  overflow-x: auto;
+  padding: 24px;
+}
+
+.prescription-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prescription-table thead {
+  background: white;
+  border-bottom: 2px solid #10b981;
+}
+
+.prescription-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #10b981;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prescription-table tbody tr {
+  border-bottom: 1px solid #e0f2f1;
+  transition: all 0.3s ease;
+}
+
+.prescription-table tbody tr:hover {
+  background: #f0fdf4;
+  box-shadow: inset 0 0 8px rgba(16, 185, 129, 0.1);
+}
+
+.prescription-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.id-cell {
+  text-align: center;
+}
+
+.badge-id {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.consultation-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.patient-name {
+  color: #059669;
+  font-weight: 600;
+}
+
+.product-badge {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.quantity-badge {
+  background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+  color: #059669;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.actions-cell {
+  text-align: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-detail {
+  color: #0891b2;
+}
+
+.btn-detail:hover {
+  background: #cffafe;
+}
+
+.btn-edit {
+  color: #f59e0b;
+}
+
+.btn-edit:hover {
+  background: #fef3c7;
+}
+
+.btn-delete {
+  color: #ef4444;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  border: 4px solid #e0f2f1;
+  border-top: 4px solid #10b981;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-state p,
+.empty-state p {
+  color: #059669;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  .prescription-table {
+    font-size: 12px;
+  }
+
+  .prescription-table th,
+  .prescription-table td {
+    padding: 12px 8px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .btn-action {
+    padding: 6px;
+  }
+}

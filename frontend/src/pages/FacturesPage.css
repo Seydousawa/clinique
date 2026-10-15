@@ -1,0 +1,551 @@
+/* FacturesPage.css - Version Ultra Simple */
+.factures-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* En-tête */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.btn-secondary {
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.btn-link:hover {
+  color: #0056b3;
+}
+
+/* Barre de recherche */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  width: 16px; /* Taille réduite */
+  height: 16px; /* Taille réduite */
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px; /* Taille réduite (était 18px) */
+  cursor: pointer;
+  padding: 0;
+  width: 18px; /* Taille réduite */
+  height: 18px; /* Taille réduite */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-search:hover {
+  color: #555;
+}
+
+/* Tableau */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+}
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simple-table th {
+  background: #f5f5f5;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 13px;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.simple-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.simple-table tr:last-child td {
+  border-bottom: none;
+}
+
+.simple-table tr:hover td {
+  background: #f9f9f9;
+}
+
+/* Cellules spécifiques */
+.cell-id {
+  font-weight: 500;
+  color: #555;
+  width: 60px;
+}
+
+.cell-patient .patient-info {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacement réduit entre l'icône et le texte */
+}
+
+/* Avatar/Initiales avant le nom - TAILLE RÉDUITE */
+.patient-avatar {
+  width: 28px; /* Taille réduite (était probablement 32px ou plus) */
+  height: 28px; /* Taille réduite */
+  border-radius: 50%;
+  background: #5dd182;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; /* Texte dans l'avatar réduit */
+  font-weight: 600;
+  flex-shrink: 0; /* Empêche la réduction de taille */
+}
+
+.patient-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 13px;
+  margin: 0; /* Enlève les marges pour un alignement propre */
+}
+
+.patient-info-details {
+  font-size: 11px; /* Légèrement réduit */
+  color: #666;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Variante sans avatar - pour les icônes emoji */
+.patient-icon {
+  font-size: 14px; /* Taille réduite pour les emojis/icônes */
+  width: 24px; /* Largeur fixe pour l'alignement */
+  text-align: center;
+}
+
+.cell-date .date-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 13px;
+}
+
+.date-icon {
+  font-size: 12px; /* Taille réduite pour l'icône de date */
+}
+
+.cell-motif .motif-info {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.cell-amount .amount-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #28a745;
+  font-size: 13px;
+}
+
+.cell-actions .action-buttons {
+  display: flex;
+  gap: 6px; /* Espacement réduit */
+}
+
+.btn-icon {
+  padding: 5px; /* Padding réduit */
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-size: 12px; /* Taille réduite */
+  width: 28px; /* Largeur fixe réduite */
+  height: 28px; /* Hauteur fixe réduite */
+}
+
+.btn-icon svg {
+  width: 14px; /* Taille des icônes SVG réduite */
+  height: 14px;
+}
+
+.btn-icon:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.btn-delete {
+  color: #dc3545;
+  border-color: #f5c6cb;
+}
+
+.btn-delete:hover {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
+
+/* États */
+.loading-container {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+}
+
+.spinner {
+  display: inline-block;
+  width: 24px; /* Taille réduite */
+  height: 24px; /* Taille réduite */
+  border: 2px solid #f3f3f3; /* Épaisseur réduite */
+  border-top: 2px solid #28a745; /* Épaisseur réduite */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: #888;
+}
+
+.empty-state svg {
+  color: #ccc;
+  margin-bottom: 10px;
+  width: 40px; /* Taille réduite */
+  height: 40px; /* Taille réduite */
+}
+
+.empty-state p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+/* Modal Ultra Simple */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalAppear 0.2s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px; /* Padding réduit */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* Taille réduite */
+}
+
+.close-button:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Détails simples */
+.simple-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-item.highlight {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 400;
+}
+
+.amount-highlight {
+  font-size: 18px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.detail-value.notes {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 3px solid #ffc107;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .search-input-wrapper {
+    max-width: 100%;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .simple-table {
+    min-width: 600px;
+  }
+  
+  .modal-content {
+    margin: 10px;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+  }
+  
+  .modal-footer .btn {
+    width: 100%;
+  }
+  
+  /* Réductions supplémentaires sur mobile */
+  .patient-avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+  
+  .patient-name {
+    font-size: 12px;
+  }
+  
+  .patient-info-details {
+    font-size: 10px;
+  }
+  
+  .btn-icon {
+    width: 26px;
+    height: 26px;
+    padding: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .factures-page {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    max-width: 100%;
+  }
+  
+  .patient-avatar {
+    width: 22px;
+    height: 22px;
+    font-size: 10px;
+  }
+  
+  .patient-name {
+    font-size: 11px;
+  }
+  
+  .patient-info-details {
+    font-size: 9px;
+  }
+}

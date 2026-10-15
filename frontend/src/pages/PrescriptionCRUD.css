@@ -1,0 +1,129 @@
+.prescription-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.prescription-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.prescription-main {
+  padding: 30px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.prescription-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-button {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.4);
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(16, 185, 129, 0.5);
+}
+
+.add-button:active {
+  transform: translateY(0);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .prescription-main {
+    padding: 20px;
+  }
+
+  .prescription-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prescription-main {
+    padding: 16px;
+  }
+
+  .prescription-card {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-button {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prescription-main {
+    padding: 12px;
+  }
+
+  .prescription-card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .add-button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

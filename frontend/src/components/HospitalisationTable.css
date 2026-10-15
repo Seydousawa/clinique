@@ -1,0 +1,152 @@
+/* === Conteneur principal === */
+.hosp-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-top: 2rem;
+}
+
+.hosp-title {
+  color: #065f46;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.hosp-table-wrapper {
+  overflow-x: auto;
+}
+
+.hosp-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.hosp-table th {
+  background-color: #059669;
+  color: white;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.hosp-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #374151;
+}
+
+.hosp-table tr:hover {
+  background-color: #f0fdf4;
+}
+
+/* === Statuts === */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.en-cours {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.status.terminee {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+/* === Bouton voir === */
+.hosp-table button {
+  background-color: transparent;
+  border: 1px solid #72a997;
+  color: #059669;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 100%;
+}
+
+.hosp-table button:hover {
+  background-color: #059669;
+  color: white;
+}
+
+/* === Message vide === */
+.hosp-empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* === Modal === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.modal-content h3 {
+  color: #047857;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+}
+
+.close-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #059669;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #047857;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hosp-container {
+    padding: 1rem;
+  }
+
+  .hosp-table th, .hosp-table td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
